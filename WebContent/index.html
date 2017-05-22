@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+ 
+<title>Bootstrap Case</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+  <script src="app/app.js"></script>
+   <script src="app/config.js"></script>
+   <link href="app/css/style.css" rel="stylesheet"></link>
+<script src="app/controllers/homeController.js"></script>
+<script src="app/controllers/coursesController.js"></script>
+<script src="app/controllers/studentsController.js"></script>
+<script src="app/services/studentService.js"></script>
+<script src="app/controllers/mainController.js"></script>
+<!-- <base href="/" /> -->
+<title>Insert title here</title>
+</head>
+<body ng-controller="mainController" >
+	<table>
+		<tr>
+			<td colspan="2" class="header">
+				<h1>Header</h1>
+		</tr>
+		<tr>
+			<td class="leftMenu">
+		<!-- 	//# is usef to tell browser we dont want to navigate from index.html ,we want all in index.html -->
+			
+			<!-- <a href="#/home">Home</a> 
+			<a href="#/courses">Courses</a> 
+		    <a href="#/students">Students</a></td> -->
+			<a href="#/home">Home</a> 
+			<a href="#/courses">Courses</a> 
+		    <a href="#/students">Students</a></td>
+			
+			<td class="mainContent">
+<ng-view></ng-view>
+</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="footer"><b>Footer</b></td>
+		</tr>
+	</table>
+</body>
+</html>
